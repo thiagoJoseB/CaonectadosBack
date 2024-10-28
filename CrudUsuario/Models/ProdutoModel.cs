@@ -11,8 +11,6 @@
 
         public decimal preco { get; set; }  
 
-        //public int id_Categoria { get; set; }  
 
-        //public List<CategoriaModel> categorias { get; set; } = new List<CategoriaModel>();
     }
 }
