@@ -9,7 +9,9 @@
 
         public string descricao { get; set; } 
 
-        public decimal preco { get; set; }  
+        public decimal preco { get; set; }
+
+        public string ImagemUrl { get; set; }
 
 
     }

@@ -2,6 +2,7 @@
 using CrudUsuario.Models;
 using CrudUsuario.Repositorios.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace CrudUsuario.Repositorios
 {

@@ -3,6 +3,7 @@ using CrudUsuario.Repositorios.Interfaces;
 using CrudUsuario.Repositorios; // Adicione a referência do namespace onde está seu repositório
 using Microsoft.EntityFrameworkCore;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
+using Microsoft.Extensions.FileProviders;
 
 namespace CrudUsuario
 {
@@ -39,9 +40,19 @@ namespace CrudUsuario
                 app.UseHsts();
             }
 
+            // Adiciona suporte para arquivos estáticos
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "uploads")),
+                RequestPath = "/uploads"
+            });
+
+
             app.UseHttpsRedirection();
             app.UseAuthorization();
             app.MapControllers();
+
+           
 
             app.Run(); // Inicia a aplicação
         }
