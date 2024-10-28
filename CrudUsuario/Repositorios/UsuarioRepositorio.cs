@@ -53,6 +53,7 @@ namespace CrudUsuario.Repositorios
            UsuarioModel usuarioPorId = await BuscarPorID(id);
 
 
+
             var emailCadastrado = await _dbCo0ntext.Usuarios.FirstOrDefaultAsync(e => e.Email == usuario.Email && e.Id != id);
 
             if (emailCadastrado != null)

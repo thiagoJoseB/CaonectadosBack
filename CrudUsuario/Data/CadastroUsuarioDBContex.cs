@@ -12,7 +12,9 @@ namespace CrudUsuario.Data
       
         //tabela do banco;
         public DbSet<UsuarioModel> Usuarios { get; set; }
+        public DbSet<ProdutoModel> Produtos { get; set; }
 
+   
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

@@ -22,8 +22,9 @@ namespace CrudUsuario
                 options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
             });
 
-            // Injeção de dependência para o repositório
-            builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>(); // Corrigido aqui
+            // Injeção de dependência para os repositórios
+            builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
+            builder.Services.AddScoped<IProdutoRepositorio, ProdutoRepositorio>();
 
             var app = builder.Build();
 
